@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h1 class="dashboard">
+                <span class="material-symbols-outlined"> dashboard </span>
+                Dashboard
+            </h1>
+
+            <nav class="main-nav">
+
+                <span class="material-symbols-outlined">home</span>
+                Home
+
+                <span class="material-symbols-outlined"> person </span>
+                Profile
+
+                <span class="material-symbols-outlined">chat </span>
+                Messages
+
+                <span class="material-symbols-outlined">history</span>
+                History
+
+                <span class="material-symbols-outlined"> task </span>
+                Tasks
+
+                <span class="material-symbols-outlined"> groups </span>
+                Communities
+            </nav>
+
+            <nav class="secondary-nav">
+
+                <span class="material-symbols-outlined"> settings </span>
+                Settings
+
+                <span class="material-symbols-outlined"> help </span>
+                Support
+
+                <span class="material-symbols-outlined"> verified_user </span>
+                Privacy
+
+            </nav>
+        </aside>
+
+        <!-- the main content in between -->
+        <main class="main-content">
+            <header class="header">
+                <div class="search">
+                    <Span class="material-symbols-outlined"> Search</Span>
+                    <input type="search" placeholder="search...." />
+                </div>
+
+                <div class="user-info">
+                    <span class="material-symbols-outlined"> notifications </span>
+
+                    <img class="dragon a-dragon" id="dragon" src="dragon.avif">
+                    <h4> Ayusha Jonchhe </h4>
+
+                </div>
+            </header>
+
+            <section class="bottom-header">
+                <div class="greeting">
+                    <img class="dragon" id="dragon" src="dragon.avif">
+                    <div>
+                        <p> Hi there</p>
+                        <h2> Ayusha <span class="intro">(@ayusha)</span></h2>
+                    </div>
+
+                </div>
+
+                <div class="actions">
+                    <button class="btn"> New</button>
+                    <button class="btn"> Upload</button>
+                    <button class="btn"> Share</button>
+                </div>
+            </section>
+
+            <!--main dashboard content-->
+            <div class="body-grid">
+                <section class="content">
+                    <h2> Dragons of HOTD </h2>
+                    <div class="dragons">
+                        <article class="card">
+                            <img class="syrax" id="syrax" src="syrax.jfif">
+                            <h3> Syrax </h3>
+                            <p> Rhaenyra Targaryen's dragon. Elegant, fast, and one of the most recognizable dragons in
+                                the show.</p>
+                        </article>
+
+
+
+                        <article class="card">
+                            <img class="caraxes" id="caraxes" src="caraxes.jfif">
+                            <h3> Caraxes </h3>
+                            <P>Long, red, and snake-like. Ridden by Daemon Targaryen; incredibly fierce in battle. </P>
+                        </article>
+
+
+
+                        <article class="card">
+                            <img class="moondancer" id="moondancer" src="moondancer.jfif">
+                            <h3> Moondancer</h3>
+                            <P>Ridden by Baela Targaryen. Small but extremely agile.</P>
+                        </article>
+
+
+
+                        <article class="card">
+                            <img class="vhagar" id="vhagar" src="vhagar.jfif">
+                            <h3> Vhagar </h3>
+                            <P>Ridden by Aemond Targaryen. Ancient, enormous, and formerly ridden by Queen Visenya
+                                during Aegon's Conquest. </P>
+                        </article>
+
+
+                        <article class="card">
+                            <img class="melys" id="melys" src="melys.jfif">
+                            <h3> Melys </h3>
+                            <P> Ridden by Rhaenys Targaryen. Known for her speed and crimson scales. </P>
+                        </article>
+
+
+                        <article class="card">
+                            <img class="seasmoke" id="seasmoke" src="seasmoke.jfif">
+                            <h3> Seasmoke </h3>
+                            <P> Originally ridden by Laenor Valaryon, later claimed by Addam of Hull. </P>
+                        </article>
+                    </div>
+                </section>
+
+                <aside class="right-sidebar">
+                    <section class="announcementts">
+                        <h2> Announcements </h2>
+
+                        <article>
+                            <h3> ⚔️ The Small Council Meeting </h3>
+                            <p> Today, 8:00 AM. Red Keep </p>
+                            <p> Discuss dragon patrols and the security of Dragonstone.</p>
+                        </article>
+
+                        <article>
+                            <h3> 🐉 Dragon Pit Inspection </h3>
+                            <p> Tomorrow </p>
+                            <p> All dragonkeepers are ordered to report before sunrise. </p>
+                        </article>
+
+                        <article>
+                            <h3>👑 Royal Decree </h3>
+                            <p> Effective Immediately </p>
+                            <p> Unauthorized entry to the Dragon pit is strictly forbidden. </p>
+                        </article>
+
+
+                    </section>
+
+                    <section class="trending">
+                        <h2> Trending </h2>
+                        <article>
+                            <img class="rhaenyra" id="rhaenyra" src="rhaenyra.jfif">
+                            <div>
+                                <h3> @rhaenyra </h3>
+                                <p> The Queen </p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img class="daemon" id="daemon" src="daemon.jfif">
+                            <div>
+                                <h3> @Daemon </h3>
+                                <p> King Consort and The Rogue Prince </p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img class="rhaenys" id="rhaenys" src="rhaenys.jfif">
+                            <div>
+                                <h3> @rhaenys </h3>
+                                <p> The Queen who never was </p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img class="aemond" id="aemond" src="aemond.jfif">
+                            <div>
+                                <h3> @aemond </h3>
+                                <p> The prince </p>
+                            </div>
+                        </article>
+
+                    </section>
+                </aside>
+            </div>
+        </main>
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,478 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background-color: #f1f5f9;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* =========================
+   2. MAIN LAYOUT
+========================= */
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+}
+
+/* =========================
+   3. SIDEBAR
+========================= */
+
+.sidebar {
+    background-color: #0f766e;
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    min-height: 100vh;
+}
+
+.dashboard {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.dashboard .material-symbols-outlined {
+    font-size: 36px;
+}
+
+.main-nav,
+.secondary-nav {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    align-items: center;
+    gap: 22px 12px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.main-nav .material-symbols-outlined,
+.secondary-nav .material-symbols-outlined {
+    font-size: 23px;
+}
+
+.main-nav span,
+.secondary-nav span {
+    transition: transform 0.2s ease;
+}
+
+.main-nav span:hover,
+.secondary-nav span:hover {
+    transform: scale(1.15);
+}
+
+.secondary-nav {
+    margin-top: 10px;
+}
+
+/* =========================
+   4. MAIN CONTENT
+========================= */
+
+.main-content {
+    min-width: 0;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
+/* =========================
+   5. TOP HEADER
+========================= */
+
+.header {
+    background-color: #ffffff;
+    padding: 20px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    max-width: 550px;
+}
+
+.search .material-symbols-outlined {
+    color: #64748b;
+}
+
+.search input {
+    width: 100%;
+    padding: 11px 16px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: #f1f5f9;
+    font-size: 15px;
+}
+
+.search input:focus {
+    box-shadow: 0 0 0 2px #14b8a6;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.user-info > .material-symbols-outlined {
+    color: #0f766e;
+    cursor: pointer;
+}
+
+.dragon {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #f0c33c;
+}
+
+.a-dragon {
+    width: 38px;
+    height: 38px;
+}
+
+/* =========================
+   6. GREETING HEADER
+========================= */
+
+.bottom-header {
+    background-color: #ffffff;
+    padding: 22px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.greeting p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.greeting h2 {
+    font-size: 23px;
+}
+
+.intro {
+    font-size: 16px;
+    color: #64748b;
+    font-weight: normal;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    padding: 10px 23px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #115e59;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   7. DASHBOARD BODY
+========================= */
+
+.body-grid {
+    padding: 28px;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr);
+    gap: 25px;
+    align-items: start;
+    min-width: 0;
+}
+
+.content h2,
+.right-sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   8. DRAGON CARDS
+========================= */
+
+.dragons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 18px;
+    border-left: 6px solid #14b8a6;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #134e4a;
+}
+
+.card p {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* =========================
+   9. RIGHT SIDEBAR
+========================= */
+
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    min-width: 0;
+}
+
+/* Works with your current HTML class name */
+.announcementts,
+.announcements {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.announcementts h2,
+.announcements h2 {
+    margin-bottom: 10px;
+}
+
+.announcementts article,
+.announcements article {
+    padding: 15px 0;
+}
+
+.announcementts article + article,
+.announcements article + article {
+    border-top: 1px solid #e2e8f0;
+}
+
+.announcementts article h3,
+.announcements article h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+    color: #134e4a;
+}
+
+.announcementts article p,
+.announcements article p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+/* =========================
+   10. TRENDING CHARACTERS
+========================= */
+
+.trending {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.trending h2 {
+    margin-bottom: 12px;
+}
+
+.trending article {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+}
+
+.trending article + article {
+    border-top: 1px solid #e2e8f0;
+}
+
+.trending img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #f0c33c;
+    flex-shrink: 0;
+}
+
+.trending article div {
+    min-width: 0;
+}
+
+.trending h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #134e4a;
+}
+
+.trending p {
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+/* =========================
+   11. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1100px) {
+    .container {
+        grid-template-columns: 210px minmax(0, 1fr);
+    }
+
+    .sidebar {
+        padding: 22px 15px;
+    }
+
+    .dashboard {
+        font-size: 21px;
+    }
+
+    .body-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .right-sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        min-height: auto;
+        gap: 22px;
+    }
+
+    .main-nav,
+    .secondary-nav {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .dashboard {
+        margin-bottom: 0;
+    }
+
+    .header,
+    .bottom-header {
+        padding: 18px;
+        flex-wrap: wrap;
+    }
+
+    .user-info {
+        gap: 9px;
+        font-size: 13px;
+    }
+
+    .body-grid {
+        padding: 18px;
+    }
+
+    .dragons {
+        grid-template-columns: 1fr;
+    }
+
+    .right-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-nav,
+    .secondary-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .search input {
+        min-width: 0;
+    }
+
+    .greeting h2 {
+        font-size: 19px;
+    }
+
+    .btn {
+        padding: 9px 15px;
+    }
+}
